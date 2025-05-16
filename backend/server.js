@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors({
-  origin: 'https://fresh-meat-hub.vercel.app/',
+  origin: 'https://fresh-meat-hub.vercel.app',
   methods: ['GET', 'POST'],
   credentials: true,
 }));
