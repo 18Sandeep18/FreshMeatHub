@@ -37,7 +37,7 @@ const ReferAFriend = ({ isLoggedIn, setShowLogin }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:5001/api/referrals/send', {
+      const response = await fetch('https://freshmeathub.onrender.com/api/referrals/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ friendEmail, referralLink }),
