@@ -1,0 +1,122 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .product-details {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product-details h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: #e53935;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .product-price s {
+    color: #999;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .product-price .discount {
+    color: #28a745;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 500;
+  }
+  
+  .add-to-cart-btn {
+    background: linear-gradient(90deg, #e53935, #b71c1c);
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .add-to-cart-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+  }
+  
+  .add-to-cart-btn:hover::before {
+    left: 100%;
+  }
+  
+  .add-to-cart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(229, 57, 53, 0.3);
+    background: linear-gradient(90deg, #b71c1c, #e53935);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 10px;
+    }
+  
+    .product-image {
+      height: 150px;
+    }
+  
+    .product-details h3 {
+      font-size: 16px;
+    }
+  
+    .product-price {
+      font-size: 14px;
+    }
+  
+    .add-to-cart-btn {
+      padding: 6px 15px;
+      font-size: 12px;
+    }
+  }
+  

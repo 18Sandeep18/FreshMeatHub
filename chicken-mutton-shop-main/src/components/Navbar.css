@@ -1,0 +1,412 @@
+/* src/components/Navbar.css */
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo img {
+  width: 100px;
+}
+
+/* Search bar */
+.product-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.product-search input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+}
+
+.product-search button {
+  padding: 8px 15px;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.product-search button:hover {
+  background-color: #b71c1c;
+}
+
+/* Navigation links */
+.nav-links {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  color: #8b0000; /* Deep red on hover to match the theme */
+}
+
+.nav-icon {
+  font-size: 18px;
+  color: #333;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Home link */
+.home-link {
+  display: flex;
+  align-items: center;
+}
+
+/* Categories dropdown */
+.categories-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.categories-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: -20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px;
+  z-index: 1000;
+  animation: slideDown 0.3s ease-out;
+}
+
+.categories-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category-header:hover {
+  background-color: #f9f9f9;
+}
+
+.category-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* Subcategories with smooth transition */
+.subcategories {
+  max-height: 0;
+  overflow: hidden;
+  margin-left: 34px;
+  padding: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.subcategories-open {
+  max-height: 500px; /* Adjust based on content */
+  opacity: 1;
+  padding: 5px 0;
+}
+
+.subcategories a {
+  display: block;
+  padding: 5px 10px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.subcategories a:hover {
+  color: #e53935;
+}
+
+/* Profile dropdown */
+.profile-link {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  z-index: 1000;
+  animation: slideDown 0.3s ease-out;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f9f9f9;
+}
+
+/* Cart link */
+.cart {
+  position: relative;
+  color: #333;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #e53935;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.cart:hover {
+  background-color: #f9f9f9;
+}
+
+.cart-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.cart-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.cart-count {
+  background-color: #e53935;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+.cart-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e53935;
+}
+
+/* Cart dropdown */
+.cart-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  border: 2px solid #8b0000;
+  border-radius: 15px 15px 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  z-index: 1000;
+  animation: popIn 0.3s ease-out;
+  background: linear-gradient(to bottom, #f5f5dc, #f0e8c8);
+}
+
+/* Pop-in animation for the cart dropdown */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Cutting board shape effect using a pseudo-element */
+.cart-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #8b0000;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cleaver-icon {
+  font-size: 24px;
+}
+
+.cart-header h3 {
+  font-size: 18px;
+  color: #8b0000;
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+.cart-summary {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cart-items-preview {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.cart-item-preview {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.cart-item-preview:hover {
+  background-color: rgba(139, 0, 0, 0.05);
+}
+
+.cart-item-preview-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.cart-item-preview-details {
+  flex: 1;
+  font-size: 13px;
+  color: #333;
+}
+
+.cart-item-preview-details span {
+  display: block;
+}
+
+.cart-empty {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.more-items {
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.view-cart-btn {
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.view-cart-btn:hover {
+  background-color: #a30000;
+  transform: scale(1.05);
+}
+
+/* Animation for dropdowns */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* src/components/Navbar.css */
+
+/* Existing styles (keep your existing styles, just adding/updating the relevant ones) */
+
+/* Category image with transition */
+.category-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+}
+
+/* Fade effect when image changes */
+.category-image {
+  opacity: 1;
+}
+
+/* Optional: Add a hover effect to the image */
+.category-header:hover .category-image {
+  opacity: 0.8;
+}
+
+/* Rest of your existing styles */

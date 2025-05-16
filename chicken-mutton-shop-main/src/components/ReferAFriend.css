@@ -1,0 +1,296 @@
+.refer-a-friend-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    min-height: 100vh;
+  }
+  
+  .refer-title {
+    font-size: 2.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .refer-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Referral Link Section */
+  .referral-link-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .referral-link-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .referral-link-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .link-icon {
+    color: #d32f2f;
+    font-size: 1.2rem;
+  }
+  
+  .referral-link-input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 0.95rem;
+    color: #555;
+    outline: none;
+  }
+  
+  .copy-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .copy-btn:hover {
+    background-color: #b71c1c;
+  }
+  
+  /* Email Referral Section */
+  .email-referral-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .email-referral-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .email-referral-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .input-icon {
+    color: #d32f2f;
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  
+  .email-input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 0.95rem;
+    color: #333;
+    outline: none;
+  }
+  
+  .email-input::placeholder {
+    color: #999;
+  }
+  
+  .send-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .send-btn:hover {
+    background-color: #b71c1c;
+  }
+  
+  .success-message {
+    text-align: center;
+    font-size: 1rem;
+    color: #155724;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    text-align: center;
+    font-size: 1rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Social Media Sharing Section */
+  .social-share-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .social-share-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .social-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .social-btn.whatsapp {
+    background-color: #25d366;
+  }
+  
+  .social-btn.whatsapp:hover {
+    background-color: #20b358;
+  }
+  
+  .social-btn.twitter {
+    background-color: #1da1f2;
+  }
+  
+  .social-btn.twitter:hover {
+    background-color: #1991db;
+  }
+  
+  .social-btn.facebook {
+    background-color: #4267b2;
+  }
+  
+  .social-btn.facebook:hover {
+    background-color: #3b5998;
+  }
+  
+  /* Referral Benefits Section */
+  .referral-benefits {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .referral-benefits h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .benefit-icon {
+    font-size: 1.5rem;
+  }
+  
+  .benefit-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .refer-a-friend-page {
+      padding: 20px 15px;
+    }
+  
+    .refer-title {
+      font-size: 1.8rem;
+    }
+  
+    .refer-subtitle {
+      font-size: 1rem;
+    }
+  
+    .referral-link-box {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .referral-link-input {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .social-buttons {
+      flex-direction: column;
+    }
+  
+    .social-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }

@@ -1,0 +1,290 @@
+/* Existing styles */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f8f8f8;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+}
+
+.sidebar-header {
+  margin-bottom: 30px;
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.content-header {
+  margin-bottom: 20px;
+}
+
+.content-header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.orders-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.order-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.order-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-accepted {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-delivered {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.order-details p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.order-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 10px;
+}
+
+.order-details li {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.accept-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accept-button:hover {
+  background-color: #218838;
+}
+
+.reject-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reject-button:hover {
+  background-color: #c82333;
+}
+
+.deliver-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deliver-button:hover {
+  background-color: #0056b3;
+}
+
+.no-orders {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dc3545;
+}
+
+.confirmation-modal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-out;
+}
+
+.confirmation-modal p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.tick-animation, .reject-animation {
+  width: 40px;
+  height: 40px;
+}
+
+.checkmark, .rejectmark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #28a745;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  stroke: #28a745;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+.rejectmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #dc3545;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.rejectmark-x {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  stroke: #dc3545;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

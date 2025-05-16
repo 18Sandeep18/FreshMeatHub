@@ -1,0 +1,155 @@
+.checkout-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .checkout-page h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .order-summary {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  .order-summary h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .checkout-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .checkout-item:last-child {
+    border-bottom: none;
+  }
+  
+  .checkout-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .checkout-item-details {
+    flex: 1;
+  }
+  
+  .checkout-item-details h4 {
+    font-size: 16px;
+    margin: 0 0 5px;
+  }
+  
+  .checkout-item-details p {
+    margin: 0;
+    color: #555;
+  }
+  
+  .checkout-item-total {
+    font-weight: bold;
+  }
+  
+  .order-total {
+    margin-top: 15px;
+    text-align: right;
+  }
+  
+  .order-total h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .delivery-details {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  .delivery-details h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .delivery-details textarea,
+  .delivery-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .delivery-details textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .delivery-details input {
+    height: 40px;
+  }
+  
+  .error-message {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .delivery-details select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .payment-info {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+  }
+  
+  .place-order-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .place-order-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .place-order-btn:hover:not(:disabled) {
+    background-color: #218838;
+  }

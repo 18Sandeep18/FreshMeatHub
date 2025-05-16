@@ -1,0 +1,125 @@
+.landing {
+    background-color: #fff;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .welcome-section {
+    background: linear-gradient(to right, #ffebee, #fff);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .welcome-text {
+    text-align: left;
+    max-width: 30%;
+    padding-right: 20px;
+  }
+  
+  .welcome-text h1 {
+    font-size: 48px;
+    color: #e53935;
+    margin: 0;
+  }
+  
+  .welcome-text p {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .showcase {
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+  }
+  
+  .showcase-image {
+    max-width: 40%;
+    margin: 0 20px;
+  }
+  
+  .showcase-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .promo-text {
+    text-align: left;
+    max-width: 60%;
+  }
+  
+  .promo-text h2 {
+    font-size: 24px;
+    color: #e53935;
+    margin: 0;
+  }
+  
+  .promo-text p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .promo-text span {
+    color: #e53935;
+    font-weight: bold;
+  }
+  
+  .promo-text button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .promo-text button:hover {
+    background-color: #b71c1c;
+  }
+  
+  .products h3 {
+    font-size: 28px;
+    margin: 0 0 10px;
+  }
+  
+  .products p {
+    font-size: 18px;
+    margin: 0 0 20px;
+  }
+  
+  .product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .product-card span {
+    color: #e53935;
+    font-weight: bold;
+  }
