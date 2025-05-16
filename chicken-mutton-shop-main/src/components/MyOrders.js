@@ -19,7 +19,7 @@ const MyOrders = ({ isLoggedIn, setShowLogin }) => {
     const fetchOrders = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:5001/api/orders/all');
+        const response = await fetch('https://freshmeathub.onrender.com/api/orders/all');
         const data = await response.json();
         if (data.success) {
           // Sort orders by createdAt in descending order (newest first)
