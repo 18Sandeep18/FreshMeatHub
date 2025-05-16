@@ -14,7 +14,7 @@ const OwnerDashboard = () => {
   useEffect(() => {
     const fetchPendingOrders = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/orders/pending');
+        const response = await fetch('https://freshmeathub.onrender.com/api/orders/pending');
         const data = await response.json();
         if (data.success) {
           setPendingOrders(data.orders);
@@ -38,7 +38,7 @@ const OwnerDashboard = () => {
       const fetchAllOrders = async () => {
         try {
           setLoading(true);
-          const response = await fetch('http://localhost:5001/api/orders/all');
+          const response = await fetch('https://freshmeathub.onrender.com/api/orders/all');
           const data = await response.json();
           if (data.success) {
             setAllOrders(data.orders);
@@ -60,7 +60,7 @@ const OwnerDashboard = () => {
   // Function to accept an order
   const acceptOrder = async (orderId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/orders/${orderId}/accept`, {
+      const response = await fetch(`https://freshmeathub.onrender.com/api/orders/${orderId}/accept`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ const OwnerDashboard = () => {
   // Function to reject an order
   const rejectOrder = async (orderId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/orders/${orderId}/reject`, {
+      const response = await fetch(`https://freshmeathub.onrender.com/api/orders/${orderId}/reject`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ const OwnerDashboard = () => {
   // Function to mark an order as delivered
   const markAsDelivered = async (orderId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/orders/${orderId}/deliver`, {
+      const response = await fetch(`https://freshmeathub.onrender.com/api/orders/${orderId}/deliver`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
