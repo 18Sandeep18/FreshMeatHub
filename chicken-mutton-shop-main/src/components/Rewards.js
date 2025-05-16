@@ -16,7 +16,7 @@ const Rewards = ({ isLoggedIn, setShowLogin }) => {
 
     const fetchRewards = async () => {
       try {
-        const response = await fetch('http://localhost:5001/api/rewards');
+        const response = await fetch('https://freshmeathub.onrender.com/api/rewards');
         const data = await response.json();
         if (data.success) {
           setRewards(data.rewards);
@@ -35,7 +35,7 @@ const Rewards = ({ isLoggedIn, setShowLogin }) => {
   const handleClaimReward = async (rewardId) => {
     try {
       // In a real app, make an API call to claim the reward
-      const response = await fetch(`http://localhost:5001/api/rewards/claim/${rewardId}`, {
+      const response = await fetch(`https://freshmeathub.onrender.com/api/rewards/claim/${rewardId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
       });
