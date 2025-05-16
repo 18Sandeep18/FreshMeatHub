@@ -27,7 +27,7 @@ function Login({ onClose, onLoginSuccess }) {
       }
       // Call backend for signup
       try {
-        const res = await fetch('http://localhost:5001/api/signup', {
+        const res = await fetch('https://freshmeathub.onrender.com/api/signup', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password }),
@@ -48,7 +48,7 @@ function Login({ onClose, onLoginSuccess }) {
     } else {
       // Call backend for login
       try {
-        const res = await fetch('http://localhost:5001/api/login', {
+        const res = await fetch('https://freshmeathub.onrender.com/api/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password }),
