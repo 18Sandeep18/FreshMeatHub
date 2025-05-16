@@ -62,7 +62,7 @@ const Checkout = ({ cartItems, setCartItems }) => {
     console.log('Order data being sent to backend:', JSON.stringify(orderData, null, 2));
 
     try {
-      const response = await fetch('http://localhost:5001/api/orders', {
+      const response = await fetch('https://freshmeathub.onrender.com/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(orderData),
